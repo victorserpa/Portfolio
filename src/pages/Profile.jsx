@@ -52,7 +52,7 @@ export function Links() {
             <h1 className="ml-3 text-1xl font-bold text-violet-500 hover:text-white">{Context.ttUser}</h1>
           </div >
           <div className="flex items-center my-3">
-            <FaEnvelope className="" />
+            <FaEnvelope />
             <h1 className="text-1xl font-bold text-violet-500 ml-3 hover:text-white">schmvitoor@gmail.com</h1>
           </div>
         </div>
