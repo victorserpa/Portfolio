@@ -1,5 +1,5 @@
 import React from "react";
-import { FaJsSquare, FaHtml5, FaCss3, FaGit, FaNodeJs, FaReact } from 'react-icons/Fa';
+// import { FaJsSquare, FaHtml5, FaCss3, FaGit, FaNodeJs, FaReact } from 'react-icons/Fa';
 
 export function Tecnolog() {
   return (
@@ -12,25 +12,25 @@ export function Tecnolog() {
           <div className="ml-12 h-24">
           <div className="flex mx-10 items-center my-2 ">
             <div className="rounded-3xl bg-red-400 mr-2">
-              <h1 className="flex text-black font-bold m-3"><FaJsSquare /></h1>
+              <h1 className="flex text-black font-bold m-3"></h1>
             </div>
             <div className="rounded-3xl bg-red-400 mr-2">
-              <h1 className="flex m-3 text-black font-bold"><FaHtml5 className="hover:"/></h1>
+              <h1 className="flex m-3 text-black font-bold"></h1>
             </div>
             <div className="rounded-3xl bg-red-400 mr-2">
-              <h1 className="flex m-3 text-black font-bold"><FaCss3 className=" " /></h1>
+              <h1 className="flex m-3 text-black font-bold"></h1>
             </div>
             <br />
           </div>
           <div className="flex mx-10 items-center">
             <div className="rounded-3xl bg-red-400 mr-2">
-              <h1 className="flex m-3 text-black font-bold"><FaGit /></h1>
+              <h1 className="flex m-3 text-black font-bold"></h1>
             </div>
             <div className="rounded-3xl bg-red-400 mr-2">
-              <h1 className="flex m-3 text-black font-bold"><FaReact /></h1>
+              <h1 className="flex m-3 text-black font-bold"></h1>
             </div>
             <div className="rounded-3xl bg-red-400 mr-2">
-              <h1 className="flex m-3 text-black font-bold"><FaNodeJs /></h1>
+              <h1 className="flex m-3 text-black font-bold"></h1>
             </div>
           </div>
         </div>
