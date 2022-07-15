@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaEnvelope, FaTwitter, FaLinkedin, FaGithub, FaBriefcase, FaMapMarkedAlt } from 'react-icons/Fa';
+import { FaEnvelope, FaTwitter, FaLinkedin, FaGithub, FaBriefcase, FaMapMarkedAlt } from 'react-icons/fa';
 //testando commits
 
 import { api } from "../server/api";
