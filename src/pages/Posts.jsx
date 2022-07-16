@@ -6,7 +6,7 @@ export function Post() {
   const Context = UseMyContext();
 
   return (
-    <div className="md:max-w-2xl">
+    <div className="md:max-w-full">
       <div className="mx-8 mt-8 rounded-3xl bg-[#4b4661] drop-shadow-xl h-16">
         <div className='h-12'>
           <div className='flex items-center justify-between '>

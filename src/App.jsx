@@ -7,12 +7,12 @@ function App() {
 
   return (
     <div className="text-[#837E9F]">
-      <div className='flex mt-5'>
+      <div className='flex'>
         <div className=' md:shrink-0'>
           <Links />
           <Tecnolog />
         </div>
-        <div className=' flex-auto md:h-full md:w-48 '>
+        <div className=' flex-auto md:h-full md:w-full'>
           <Projects />
           <Post />
         </div>

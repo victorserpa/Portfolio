@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-// import { FaEnvelope, FaTwitter, FaLinkedin, FaGithub, FaBriefcase, FaMapMarkedAlt } from 'react-icons/fa';
-//testando commits
+
+import { IconGitHub, IconLinked, IconMail, IconOffice, IconPing, IconTt } from '../Icons/index'
 
 import { api } from "../server/api";
 import { UseMyContext } from "../context/MyContext";
@@ -13,7 +13,7 @@ export function Links() {
     async function apis() {
       await api(Context);
     }
-
+    
     apis();
   }, []);
 
@@ -33,22 +33,34 @@ export function Links() {
       <div className="rounded-3xl mt-5 drop-shadow-xl bg-[#4b4661]">
         <div className='p-10 mx-2 my-1 container w-80'>
           <div className="flex items-center my-3">
-            <h1 className="ml-3 text-1xl font-bold text-violet-500 hover:text-white">{Context.location}</h1>
+          <IconPing />
+            <h1 className="ml-3 text-1xl font-bold
+            text-violet-500 hover:text-white">{Context.location}</h1>
           </div>
           <div className="flex items-center my-3">
-            <h1 className="ml-3 text-1xl font-bold text-violet-500 hover:text-white">{Context.company}</h1>
+          <IconOffice />
+            <h1 className="ml-3 text-1xl font-bold 
+            text-violet-500 hover:text-white">{Context.company}</h1>
           </div>
           <div className="flex items-center my-3">
-          <h1 className="ml-3 text-1xl font-bold text-violet-500 hover:text-white">{Context.login}</h1>
+          <IconGitHub />
+          <h1 className="ml-3 text-1xl font-bold 
+          text-violet-500 hover:text-white">{Context.login}</h1>
         </div>
         <div className="flex items-center my-3">
-          <h1 className="ml-3 text-1xl font-bold text-violet-500 hover:text-white">{Context.blog}</h1>
+        <IconLinked />
+          <h1 className="ml-3 text-1xl font-bold 
+          text-violet-500 hover:text-white">{Context.blog}</h1>
         </div>
         <div className="flex items-center my-3">
-            <h1 className="ml-3 text-1xl font-bold text-violet-500 hover:text-white">{Context.ttUser}</h1>
+        <IconTt />
+            <h1 className="ml-3 text-1xl font-bold 
+            text-violet-500 hover:text-white">{Context.ttUser}</h1>
       </div >
       <div className="flex items-center my-3">
-        <h1 className="text-1xl font-bold text-violet-500 ml-3 hover:text-white">schmvitoor@gmail.com</h1>
+      <IconMail />
+        <h1 className="text-1xl font-bold 
+        text-violet-500 ml-3 hover:text-white">schmvitoor@gmail.com</h1>
       </div>
     </div>
       </div >

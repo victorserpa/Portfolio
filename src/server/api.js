@@ -9,7 +9,6 @@ export async function api(Context) {
   Context.setLogin(data.login);
   Context.setBlog(data.blog);
   Context.setTtUser(data.twitter_username);
-  Context.setMail(data.mail)
-  Context.setRepos(data.repos_url)
+  Context.setMail(data.mail);
   Context.setAvatar(data.avatar_url)
 }
