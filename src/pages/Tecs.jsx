@@ -15,7 +15,7 @@ export function Tecnolog() {
           <div className="mx-20 h-20">
             <div className="flex mx-10 items-center my-2 ">
               <div className="rounded-3xl mr-2">
-                <IconJs />
+                <IconJs className="hover"/>
                 <h1 className="flex text-black font-bold m-3"></h1>
               </div>
               <div className="rounded-3xl mr-2">

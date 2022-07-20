@@ -1,24 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react"
+import axios from "axios";
 
+import { getApiGitHub } from '../server/api'
+// import { getApiGit } from '../server/repos'
 
-
-import { apiRepos } from "../server/repos";
-import { UseMyContext } from "../context/MyContext";
 import { IconBranch, IconFolder, IconStar } from "../Icons";
 
-
 export function Projects() {
-  const Context = UseMyContext()
-  
+  const [reposName, setreposName] = useState("")
+  const [descripRepo, setDescripRepo] = useState("")
+  const [lang, setLang] = useState("")
+  const [stars, setStars] = useState("")
+  const [fork, setFork] = useState("")
+
+  const [nameRepos, setNameRepos] = useState("")
+  const [repoDescrip, setRepoDescrip] = useState("")
+  const [langue, setLangue] = useState("")
+  const [Starss, setStarss] = useState("")
+  const [forks, setForks] = useState("")
+
   useEffect(() => {
-    async function apiRepos() {
-      await apiRepos(Context);
+    async function apis() {
+      const { name, description, language, stargazers_count, forks } = await getApiGitHub("Palpite-box");
+
+
+      setreposName(name);
+      setDescripRepo(description);
+      setLang(language);
+      setStars(stargazers_count)
+      setFork(forks)
+
+      const x = await getApiGitHub("socialLinks");
+
+      setNameRepos(x.name);
+      setRepoDescrip(x.description);
+      setLangue(x.language);
+      setStarss(x.stargazers_count);
+      setForks(x.forks)
     }
-    apiRepos();
+
+    apis();
   }, []);
-  
-  
-  
+
   return (
     <div>
       <div className="mx-8 mt-4 rounded-3xl bg-[#4b4661] drop-shadow-xl h-16 ">
@@ -31,44 +54,44 @@ export function Projects() {
       </div>
       <div className="flex ml-12 md:max-w-full">
         <div className='flex'>
-          <div className=" md:shrink-0 mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96">
+          <div className=" md:shrink-0 mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]">
             <div className='flex items-center mt-9 mx-8'>
               <IconFolder />
-              <h1 className=" h-4 ml-3 font-bold">Nome Projeto</h1>
+              <p className=" h-4 ml-3 font-bold">{reposName}</p>
             </div>
             <div className="m-8 text-sm">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In aspernatur expedita porro explicabo temp</p>
+              <p id="reposNames">{descripRepo}</p>
             </div>
             <div className="flex items-center ml-8 mb-5">
               <IconStar />
-              <p className="ml-1">100</p>
+              <p className="ml-1">{stars}</p>
               <div className="flex items-center ml-3">
                 <IconBranch />
-                <p className="ml-1">100</p>
+                <p className="ml-1">{fork}</p>
                 <div className="ml-32 flex items-center w-24">
-                  <p className="ml-5">HTML</p>
+                  <p className="ml-5">{lang}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className='flex'>
-          <div className="row ml-3 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96">
+          <div className="row ml-3 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]">
             <div className='flex items-center  h-4 mt-9 mx-8'>
               <IconFolder />
-              <h1 className=" h-4 ml-3 font-bold">Nome Projeto</h1>
+              <h1 className=" h-4 ml-3 font-bold">{nameRepos}</h1>
             </div>
-            <div className="m-8 text-sm">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In aspernatur expedita porro explicabo temp</p>
+            <div className="m-8 text-sm mb-20">
+              <p>{repoDescrip}</p>
             </div>
             <div className="flex items-center ml-8">
               <IconStar />
-              <p className="ml-1">100</p>
+              <p className="ml-1">{Starss}</p>
               <div className="flex items-center ml-3">
                 <IconBranch />
-                <p className="ml-1">100</p>
+                <p className="ml-1">{forks}</p>
                 <div className="ml-32 flex items-center w-24">
-                  <p className="ml-5">HTML</p>
+                  <p className="ml-5">{langue}</p>
                 </div>
               </div>
             </div>

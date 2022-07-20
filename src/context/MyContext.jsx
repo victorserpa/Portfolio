@@ -3,8 +3,6 @@ import React, { useState } from "react";
 export const Context = React.createContext({});
 
 export const MyContext = (props) => {
-
-  const [repos, setRepos] = useState({name : '',})
   // para receber os repositórios que é enviado como object pela API
   const [avatar, setAvatar] = useState("")
   const [name, setName] = useState("")
@@ -21,7 +19,6 @@ export const MyContext = (props) => {
     <Context.Provider  value={{
       avatar, setAvatar,
       name, setName,
-      repos, setRepos,
       location, setLocation,
       company, setCompany,
       login, setLogin,
