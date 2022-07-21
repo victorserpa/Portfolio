@@ -31,6 +31,8 @@
 
 Project created to better present my knowledge in the area of Web development.
 
+Using GitHub's own API.
+
 ## 🚀 Technologies
 
 Technologies that I used to develop this web client
