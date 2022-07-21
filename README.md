@@ -1,9 +1,13 @@
+[![HitCount](http://hits.dwyl.com/victorserpa/Portfolio.svg)](http://hits.dwyl.com/victorserpa/Portfolio)
+
 <h1 align="center">
   Portfólio
 </h1>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/badge/language-ReactJS-blue">
+  <img alt="GitHub top language" src="https://img.shields.io/badge/Language-JavaScript-yellow">
+  
+  <img alt="Library" src="https://img.shields.io/badge/Library-ReactJS-blue">
   
   <img alt="Version NodeJS" src="https://img.shields.io/badge/NodeJs-v16-green">
 
