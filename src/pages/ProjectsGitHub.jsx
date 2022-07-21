@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
-import axios from "axios";
 
-import { getApiGitHub } from '../server/api'
-// import { getApiGit } from '../server/repos'
+import { getRepositoryInformation } from '../server/apiGit'
 
 import { IconBranch, IconFolder, IconStar } from "../Icons";
 
@@ -12,34 +10,35 @@ export function Projects() {
   const [lang, setLang] = useState("")
   const [stars, setStars] = useState("")
   const [fork, setFork] = useState("")
+  const [linkRepo, setLinkRepo] = useState("")
 
   const [nameRepos, setNameRepos] = useState("")
   const [repoDescrip, setRepoDescrip] = useState("")
   const [langue, setLangue] = useState("")
   const [Starss, setStarss] = useState("")
   const [forks, setForks] = useState("")
-
+  const [linkRepos, setLinkRepos] = useState("")
   useEffect(() => {
-    async function apis() {
-      const { name, description, language, stargazers_count, forks } = await getApiGitHub("Palpite-box");
-
+    async function apiRepoGitHub() {
+      const { name, description, language, stargazers_count, forks, html_url } = await getRepositoryInformation("Palpite-box");
 
       setreposName(name);
       setDescripRepo(description);
       setLang(language);
-      setStars(stargazers_count)
-      setFork(forks)
+      setStars(stargazers_count);
+      setFork(forks);
+      setLinkRepo(html_url)
 
-      const x = await getApiGitHub("socialLinks");
+      const x = await getRepositoryInformation("socialLinks");
 
       setNameRepos(x.name);
       setRepoDescrip(x.description);
       setLangue(x.language);
       setStarss(x.stargazers_count);
-      setForks(x.forks)
+      setForks(x.forks);
+      setLinkRepos(x.html_url);
     }
-
-    apis();
+    apiRepoGitHub();
   }, []);
 
   return (
@@ -54,13 +53,13 @@ export function Projects() {
       </div>
       <div className="flex ml-12 md:max-w-full">
         <div className='flex'>
-          <div className=" md:shrink-0 mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]">
+          <div className=" md:shrink-0 mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]" href="https://github.com/victorserpa/Palpite-box">
             <div className='flex items-center mt-9 mx-8'>
               <IconFolder />
               <p className=" h-4 ml-3 font-bold">{reposName}</p>
             </div>
             <div className="m-8 text-sm">
-              <p id="reposNames">{descripRepo}</p>
+            <a href="https://github.com/victorserpa/Palpite-box" target="_blank">{descripRepo}</a>
             </div>
             <div className="flex items-center ml-8 mb-5">
               <IconStar />
@@ -82,7 +81,8 @@ export function Projects() {
               <h1 className=" h-4 ml-3 font-bold">{nameRepos}</h1>
             </div>
             <div className="m-8 text-sm mb-20">
-              <p>{repoDescrip}</p>
+            <a href="https://github.com/victorserpa/socialLinks">{repoDescrip}</a>
+              {/* <p>{repoDescrip}</p> */}
             </div>
             <div className="flex items-center ml-8">
               <IconStar />

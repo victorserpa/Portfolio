@@ -1,7 +1,7 @@
 import { Links } from "./pages/Profile"
-import { Projects } from './pages/MyProjects'
+import { Projects } from './pages/ProjectsGitHub'
 import { Post } from "./pages/Posts"
-import { Tecnolog } from "./pages/Tecs"
+import { Tecnolog } from "./pages/Tecnologies"
 
 function App() {
 

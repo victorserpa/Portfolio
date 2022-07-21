@@ -15,7 +15,7 @@ export function Post() {
         </div>
       </div>
       <div>
-        <div className="mx-8 rounded-3xl bg-[#4b4661] drop-shadow-xl h-52 hover:bg-[#413868]">
+        <div className="mx-8 rounded-3xl bg-[#4b4661] drop-shadow-xl h-52">
           <div>
             <div className='flex mx-8 mt-8 '>
               <img src={Context.avatar} alt="Foto de Perfil" className="mt-8 border-lime-500 border-2 rounded-full w-32 h-32" />
@@ -32,7 +32,7 @@ export function Post() {
         </div>
       </div>
       <div>
-        <div className="mx-8 rounded-3xl bg-[#4b4661] drop-shadow-xl h-52 hover:bg-[#413868]">
+        <div className="mx-8 rounded-3xl bg-[#4b4661] drop-shadow-xl h-52">
           <div>
             <div className='flex mx-8 mt-8 '>
               <img src={Context.avatar} alt="Foto de Perfil" className="mt-8 border-lime-500 border-2 rounded-full w-32 h-32" />
