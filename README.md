@@ -12,6 +12,7 @@
   </a>
   
   <img alt="GitHub" src="https://img.shields.io/github/license/EliasGcf/readme-template">
+  [![HitCount](http://hits.dwyl.com/victorserpa/Portfolio.svg)](http://hits.dwyl.com/victorserpa/Portfolio)
 </p>
 
 <p align="center">
