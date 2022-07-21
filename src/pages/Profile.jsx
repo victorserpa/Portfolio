@@ -37,8 +37,9 @@ export function Links() {
           </div>
           <div className="flex items-center my-3">
             <IconOffice />
-            <h1 className="ml-3 text-1xl font-bold 
-            text-violet-500">{Context.company}</h1>
+            <h1></h1>
+            <a href="https://szsolucoes.com.br/#" target="_blank" className="ml-3 text-1xl font-bold 
+            text-violet-500 hover:text-white">{Context.company}</a>
           </div>
           <div className="flex items-center my-3">
             <IconGitHub />

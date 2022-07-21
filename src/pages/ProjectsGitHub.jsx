@@ -42,7 +42,7 @@ export function Projects() {
   }, []);
 
   return (
-    <div>
+    <div className="md:max-w-full">
       <div className="mx-8 mt-4 rounded-3xl bg-[#4b4661] drop-shadow-xl h-16 ">
         <div className='h-12'>
           <div className='flex items-center justify-between '>
@@ -51,15 +51,15 @@ export function Projects() {
           </div>
         </div>
       </div>
-      <div className="flex ml-12 md:max-w-full">
+      <div className="flex">
         <div className='flex'>
-          <div className=" md:shrink-0 mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]" href="https://github.com/victorserpa/Palpite-box">
+          <div className="mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]" href="https://github.com/victorserpa/Palpite-box">
             <div className='flex items-center mt-9 mx-8'>
               <IconFolder />
               <p className=" h-4 ml-3 font-bold">{reposName}</p>
             </div>
             <div className="m-8 text-sm">
-            <a href="https://github.com/victorserpa/Palpite-box" target="_blank">{descripRepo}</a>
+              <a href="https://github.com/victorserpa/Palpite-box" target="_blank">{descripRepo}</a>
             </div>
             <div className="flex items-center ml-8 mb-5">
               <IconStar />
@@ -74,24 +74,26 @@ export function Projects() {
             </div>
           </div>
         </div>
-        <div className='flex'>
-          <div className="row ml-3 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]">
-            <div className='flex items-center  h-4 mt-9 mx-8'>
-              <IconFolder />
-              <h1 className=" h-4 ml-3 font-bold">{nameRepos}</h1>
-            </div>
-            <div className="m-8 text-sm mb-20">
-            <a href="https://github.com/victorserpa/socialLinks">{repoDescrip}</a>
-              {/* <p>{repoDescrip}</p> */}
-            </div>
-            <div className="flex items-center ml-8">
-              <IconStar />
-              <p className="ml-1">{Starss}</p>
-              <div className="flex items-center ml-3">
-                <IconBranch />
-                <p className="ml-1">{forks}</p>
-                <div className="ml-32 flex items-center w-24">
-                  <p className="ml-5">{langue}</p>
+        <div className="flex md:max-w-full">
+          <div className='flex'>
+            <div className="row ml-3 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]">
+              <div className='flex items-center  h-4 mt-9 mx-8'>
+                <IconFolder />
+                <h1 className=" h-4 ml-3 font-bold">{nameRepos}</h1>
+              </div>
+              <div className="m-8 text-sm mb-20">
+                <a href="https://github.com/victorserpa/socialLinks" target='_blank'>{repoDescrip}</a>
+                {/* <p>{repoDescrip}</p> */}
+              </div>
+              <div className="flex items-center ml-8">
+                <IconStar />
+                <p className="ml-1">{Starss}</p>
+                <div className="flex items-center ml-3">
+                  <IconBranch />
+                  <p className="ml-1">{forks}</p>
+                  <div className="ml-32 flex items-center w-24">
+                    <p className="ml-5">{langue}</p>
+                  </div>
                 </div>
               </div>
             </div>
