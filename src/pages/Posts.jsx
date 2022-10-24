@@ -21,7 +21,7 @@ export function Post() {
               <img src={Context.avatar} alt="Foto de Perfil" className="mt-8 border-lime-500 border-2 rounded-full w-32 h-32" />
               <strong className="mt-10 mb-24 ml-5">Ignite Lag | Rocketseat
                 <br />
-                <h2 className="font-normal mt-2">1 mês atrás</h2>
+                <h2 className="font-normal mt-2">3 mês atrás</h2>
                 <br />
                 <p>Início do curso Ignite Lab da Rocketseat, focado em ReactJS, React Native e NodeJS</p>
               </strong>

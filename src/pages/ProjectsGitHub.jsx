@@ -29,7 +29,7 @@ export function Projects() {
       setFork(forks);
       setLinkRepo(html_url)
 
-      const x = await getRepositoryInformation("socialLinks");
+      const x = await getRepositoryInformation("eSports-NLW-Ignite")
 
       setNameRepos(x.name);
       setRepoDescrip(x.description);
@@ -42,24 +42,38 @@ export function Projects() {
   }, []);
 
   return (
-    <div className="md:max-w-full">
+    <div className="md:max-w-full ">
       <div className="mx-8 mt-4 rounded-3xl bg-[#4b4661] drop-shadow-xl h-16 ">
-        <div className='h-12'>
-          <div className='flex items-center justify-between '>
-            <h1 className="ml-4 p-5 font-bold">My Projects</h1>
-            <a href='https://github.com/victorserpa' target='_blank' className="cursor-pointer mr-8 hover:text-white font-bold">Veja todos</a>
+        <div className="h-12 ">
+          <div className="flex items-center justify-between ">
+            <h1 className="ml-4 p-5 font-bold text-white">My Projects</h1>
+            <a
+              href="https://github.com/victorserpa"
+              target="_blank"
+              className="cursor-pointer text-indigo-100 mr-8 hover:text-white font-bold"
+            >
+              Veja todos
+            </a>
           </div>
         </div>
       </div>
-      <div className="flex">
-        <div className='flex'>
-          <div className="mx-8 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]" href="https://github.com/victorserpa/Palpite-box">
-            <div className='flex items-center mt-9 mx-8'>
+      <div className="flex text-indigo-50 gap-4">
+        <div className="flex items-center gap-10">
+          <div
+            className="ml-20 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]"
+            href="https://github.com/victorserpa/Palpite-box"
+          >
+            <div className="flex items-center mt-9 mx-8">
               <IconFolder />
-              <p className=" h-4 ml-3 font-bold">{reposName}</p>
+              <p className="h-4 ml-3 font-bold -mt-2">{reposName}</p>
             </div>
             <div className="m-8 text-sm">
-              <a href="https://github.com/victorserpa/Palpite-box" target="_blank">{descripRepo}</a>
+              <a
+                href="https://github.com/victorserpa/Palpite-box"
+                target="_blank"
+              >
+                {descripRepo}
+              </a>
             </div>
             <div className="flex items-center ml-8 mb-5">
               <IconStar />
@@ -74,15 +88,20 @@ export function Projects() {
             </div>
           </div>
         </div>
-        <div className="flex md:max-w-full">
-          <div className='flex'>
+        <div className="flex md:max-w-full text-indigo-50">
+          <div className="flex">
             <div className="row ml-3 mt-5 rounded-3xl bg-[#4b4661] drop-shadow-xl w-96 hover:bg-[#413868]">
-              <div className='flex items-center  h-4 mt-9 mx-8'>
+              <div className="flex items-center  h-4 mt-9 mx-8">
                 <IconFolder />
-                <h1 className=" h-4 ml-3 font-bold">{nameRepos}</h1>
+                <h1 className=" h-4 ml-3 font-bold -mt-2">{nameRepos}</h1>
               </div>
               <div className="m-8 text-sm mb-20">
-                <a href="https://github.com/victorserpa/socialLinks" target='_blank'>{repoDescrip}</a>
+                <a
+                  href="https://github.com/victorserpa/eSports-NLW-Ignite"
+                  target="_blank"
+                >
+                  {repoDescrip}
+                </a>
                 {/* <p>{repoDescrip}</p> */}
               </div>
               <div className="flex items-center ml-8">
